@@ -19,52 +19,59 @@ public class PercolationStats {
     private final double[] percolationThreshold;
     private final int numOfTrials;
 
+    private double mean;
+    private double stddev;
+    private double confidenceHi;
+    private double confidenceLo;
+
     public PercolationStats(int n, int trials){    // perform trials independent experiments on an n-by-n grid
-        Stopwatch timer = new Stopwatch();
-        Percolation p;
-        numOfTrials = trials;
-        int totalNumberOfSites = n * n;
-        percolationThreshold = new double[trials];
-        for(int i = 0; i < trials; i++){
-            p = new Percolation(n);
-            while(!p.percolates()){
-                int randRow = StdRandom.uniform(n) + 1;
-                int randCol = StdRandom.uniform(n) + 1;
-                if(!p.isOpen(randRow, randCol)){
-                    p.open(randRow, randCol);
+        if (n > 0 && trials > 0){
+            Stopwatch timer = new Stopwatch();
+            Percolation p;
+            numOfTrials = trials;
+            int totalNumberOfSites = n * n;
+            percolationThreshold = new double[trials];
+            for(int i = 0; i < trials; i++){
+                p = new Percolation(n);
+                while(!p.percolates()){
+                    int randRow = StdRandom.uniform(n) + 1;
+                    int randCol = StdRandom.uniform(n) + 1;
+                    if(!p.isOpen(randRow, randCol)){
+                        p.open(randRow, randCol);
+                    }
                 }
+                double nos = (double) p.numberOfOpenSites();
+                percolationThreshold[i] = nos / totalNumberOfSites;
             }
-            double nos = (double) p.numberOfOpenSites();
-            percolationThreshold[i] = nos / totalNumberOfSites;
+            double time = timer.elapsedTime();
+            mean = StdStats.mean(percolationThreshold);
+            stddev = StdStats.stddev(percolationThreshold);
+            confidenceHi = (mean + ((CONFIDENCE_95 * stddev)/Math.sqrt(numOfTrials)));
+            confidenceLo = (mean - ((CONFIDENCE_95 * stddev)/Math.sqrt(numOfTrials)));
+        } else {
+            throw new IllegalArgumentException("Not valid value of either n or trials or both");
         }
-        double time = timer.elapsedTime();
-        System.out.println("N:\t" + n);
-        System.out.println("\nTime Elapsed:\t" + time);
     }
     public double mean(){                          // sample mean of percolation threshold
-        return StdStats.mean(percolationThreshold);
+        return mean;
     }
     public double stddev(){                        // sample standard deviation of percolation threshold
-        return StdStats.stddev(percolationThreshold);
+        return stddev;
     }
     public double confidenceLo(){                  // low  endpoint of 95% confidence interval
-        double mean = mean();
-        double stddev = stddev();
-        return (mean - ((CONFIDENCE_95 * stddev)/Math.sqrt(numOfTrials)));
+        return confidenceLo;
     }
     public double confidenceHi(){                  // high endpoint of 95% confidence interval
-        double mean = mean();
-        double stddev = stddev();
-        return (mean + ((CONFIDENCE_95 * stddev)/Math.sqrt(numOfTrials)));
+        return confidenceHi;
     }
-    private void displayStats(){
-        System.out.println("Trials:\t" + numOfTrials);
-        System.out.println("Mean:\t" + mean());
-        System.out.println("Std Dev:\t" + stddev());
-        System.out.println("Confidence Low:\t" + confidenceLo());
-        System.out.println("Confidence High:\t" + confidenceHi());
 
-    }
+//    private void displayStats(){
+//        System.out.println("Trials:\t" + numOfTrials);
+//        System.out.println("Mean:\t" + mean());
+//        System.out.println("Std Dev:\t" + stddev());
+//        System.out.println("Confidence Low:\t" + confidenceLo());
+//        System.out.println("Confidence High:\t" + confidenceHi());
+//    }
 
     public static void main(String args[]){  //For testing only
 
