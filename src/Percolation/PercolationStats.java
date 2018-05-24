@@ -1,9 +1,9 @@
-/*------------------------------------------------------------------------------------------------------------------
+package Percolation;/*------------------------------------------------------------------------------------------------------------------
     Author: Samarth Tambad
-    Class Name: PercolationStats.java
-    Dependencies: Percolation, StdRandom, StdStats, Stopwatch (algs4.jar)
-    Compile: javac PercolationStats.java
-    Run: java PercolationStats.java
+    Class Name: Percolation.PercolationStats.java
+    Dependencies: Percolation.Percolation, StdRandom, StdStats, Stopwatch (algs4.jar)
+    Compile: javac Percolation.PercolationStats.java
+    Run: java Percolation.PercolationStats.java
     Description: This class performs the Monte Carlo simulation where series of T trials on percolation models of nxn
     dimension. It then computes the mean, stddev, confidenceLo & confidenceHi (95% confidence) of the percolation thresholds.
     The percolation threshold represents the fraction of filled sites with which the system almost always percolates.
