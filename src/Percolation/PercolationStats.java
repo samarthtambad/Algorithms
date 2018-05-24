@@ -1,4 +1,6 @@
-package Percolation;/*------------------------------------------------------------------------------------------------------------------
+package Percolation;
+
+/*------------------------------------------------------------------------------------------------------------------
     Author: Samarth Tambad
     Class Name: Percolation.PercolationStats.java
     Dependencies: Percolation.Percolation, StdRandom, StdStats, Stopwatch (algs4.jar)

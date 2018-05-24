@@ -1,3 +1,14 @@
+
+
+/*------------------------------------------------------------------------------------------------------------------
+    Author: Samarth Tambad
+    Class Name: Deque.java
+    Dependencies: Iterator
+    Compile: javac Deque.java
+    Run: java Deque.java
+    Description: This class implements a Double Ended Queue (Deque)
+------------------------------------------------------------------------------------------------------------------*/
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -32,6 +43,7 @@ public class Deque<Item> implements Iterable<Item> {
         if(last == null){
             last = first;
         }
+        size++;
     }
 
     public void addLast(Item item){     // add the item to the end
@@ -45,6 +57,7 @@ public class Deque<Item> implements Iterable<Item> {
         if(first == null){
             first = last;
         }
+        size++;
     }
 
     public Item removeFirst(){      // remove and return the item from the front
@@ -56,6 +69,7 @@ public class Deque<Item> implements Iterable<Item> {
             last = null;
         }
         first = first.next;
+        size--;
         return item;
     }
 
@@ -77,6 +91,7 @@ public class Deque<Item> implements Iterable<Item> {
             item = last.item;
             last = secondLast;
         }
+        size--;
         return item;
     }
 

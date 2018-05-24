@@ -1,9 +1,11 @@
-package Percolation;/*------------------------------------------------------------------------------------------------------------------
+package Percolation;
+
+/*------------------------------------------------------------------------------------------------------------------
     Author: Samarth Tambad
-    Class Name: Percolation.Percolation.java
+    Class Name: Percolation.java
     Dependencies: WeightedQuickUnionUF (algs4.jar)
-    Compile: javac Percolation.Percolation.java
-    Run: java Percolation.Percolation.java
+    Compile: javac Percolation.java
+    Run: java Percolation.java
     Description: This class is a model for percolation object. It creates a nxn grid of sites.
     All sites are closed by default. The user can choose to open a site at a given location (row, col).
     The user can also choose to check if the current model percolates i.e. if there is a path b/w any sites at the
