@@ -130,28 +130,28 @@ public class Deque<Item> implements Iterable<Item> {
     }
 
     public static void main(String[] args){
-        
-        Deque<Integer> deque = new Deque<Integer>();
-        deque.addFirst(3);
-        deque.addLast(4);
-        deque.addFirst(2);
-        deque.addFirst(1);
-        deque.addLast(5);
-        deque.addLast(6);
-        deque.addLast(7);
-        deque.addFirst(9);
-        System.out.println(deque.removeFirst());
-        System.out.println(deque.removeLast());
-        Iterator<Integer> iterator = deque.iterator();
-        while (iterator.hasNext()){
-            System.out.println(iterator.next());
-        }
-        System.out.println(deque.removeLast());
-        System.out.println(deque.removeLast());
-        System.out.println(deque.removeLast());
-        System.out.println(deque.removeLast());
-        System.out.println(deque.removeLast());
-        System.out.println(deque.removeLast());
+
+//        Deque<Integer> deque = new Deque<Integer>();
+//        deque.addFirst(3);
+//        deque.addLast(4);
+//        deque.addFirst(2);
+//        deque.addFirst(1);
+//        deque.addLast(5);
+//        deque.addLast(6);
+//        deque.addLast(7);
+//        deque.addFirst(9);
+//        System.out.println(deque.removeFirst());
+//        System.out.println(deque.removeLast());
+//        Iterator<Integer> iterator = deque.iterator();
+//        while (iterator.hasNext()){
+//            System.out.println(iterator.next());
+//        }
+//        System.out.println(deque.removeLast());
+//        System.out.println(deque.removeLast());
+//        System.out.println(deque.removeLast());
+//        System.out.println(deque.removeLast());
+//        System.out.println(deque.removeLast());
+//        System.out.println(deque.removeLast());
 
     }
 
