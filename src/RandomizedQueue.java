@@ -32,7 +32,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         return size;
     }
 
-    public void enque(Item item) throws IllegalArgumentException{   // add the item
+    public void enqueue(Item item) throws IllegalArgumentException{   // add the item
         if(item == null) throw new IllegalArgumentException("Value of item is not valid");
         if(items.length == size) {
             resize(2 * items.length);
@@ -44,7 +44,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         }
     }
 
-    public Item deque() throws  NoSuchElementException {    // remove and return a random item
+    public Item dequeue() throws  NoSuchElementException {    // remove and return a random item
         if(isEmpty()) throw new NoSuchElementException("Cannot delete from empty queue");
         int randIndex = StdRandom.uniform(size);
         Item randItem = items[randIndex];
