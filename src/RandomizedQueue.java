@@ -36,11 +36,11 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         if(item == null) throw new IllegalArgumentException("Value of item is not valid");
         if(items.length == size) {
             resize(2 * items.length);
-            items[size - 1] = item;
             size++;
+            items[size - 1] = item;
         } else {
-            items[size - 1] = item;
             size++;
+            items[size - 1] = item;
         }
     }
 
