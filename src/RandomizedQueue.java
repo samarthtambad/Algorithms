@@ -34,12 +34,11 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
     public void enqueue(Item item) {   // add the item
         if(item == null) throw new IllegalArgumentException("Value of item is not valid");
-        if(items.length == size) {
+        size++;
+        if(items.length <= size) {
             resize(2 * items.length);
-            size++;
             items[size - 1] = item;
         } else {
-            size++;
             items[size - 1] = item;
         }
     }
