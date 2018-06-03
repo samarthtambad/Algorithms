@@ -1,9 +1,10 @@
-import edu.princeton.cs.algs4.*;
-
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import edu.princeton.cs.algs4.StdDraw;
+import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.StdOut;
 
 public class BruteCollinearPoints {
 
@@ -12,19 +13,21 @@ public class BruteCollinearPoints {
     public BruteCollinearPoints(Point[] points){    // finds all line segments containing 4 points
         if(points == null) throw new IllegalArgumentException("Not a valid argument input");
         checkDuplicatePoints(points);
-        StdDraw.setPenColor(Color.RED);
-        StdDraw.setXscale();
-        StdDraw.setYscale();
         segments = new ArrayList<>();
-        Arrays.sort(points);
-        for (int i = 0; i < points.length; i++){
-            for (int j = i + 1; j < points.length; j++){
-                for (int k = j + 1; k < points.length; k++){
-                    for (int l = k + 1; l < points.length; l++){
-                        Point p1 = points[i];
-                        Point p2 = points[j];
-                        Point p3 = points[k];
-                        Point p4 = points[l];
+        Point[] aux = Arrays.copyOf(points, points.length);
+        Arrays.sort(aux);
+        for (int i = 0; i < aux.length; i++){
+            if(points[i] == null) throw new IllegalArgumentException("Not valid");
+            for (int j = i + 1; j < aux.length; j++){
+                if(points[j] == null) throw new IllegalArgumentException("Not valid");
+                for (int k = j + 1; k < aux.length; k++){
+                    if(points[k] == null) throw new IllegalArgumentException("Not valid");
+                    for (int l = k + 1; l < aux.length; l++){
+                        if(points[l] == null) throw new IllegalArgumentException("Not valid");
+                        Point p1 = aux[i];
+                        Point p2 = aux[j];
+                        Point p3 = aux[k];
+                        Point p4 = aux[l];
                         if (p1.slopeTo(p2) == p1.slopeTo(p3)
                                 && p1.slopeTo(p3) == p1.slopeTo(p4)) {
                             p1.drawTo(p4);
