@@ -109,7 +109,19 @@ public class Point implements Comparable<Point> {
      */
     public Comparator<Point> slopeOrder() {
         /* YOUR CODE HERE */
-        return null;
+        class slopeOrder implements Comparator<Point>{
+            @Override
+            public int compare(Point o1, Point o2) {
+                if (slopeTo(o1) < slopeTo(o2)){
+                    return -1;
+                } else if(slopeTo(o1) > slopeTo(o2)){
+                    return 1;
+                } else {
+                    return 0;
+                }
+            }
+        }
+        return new slopeOrder();
     }
 
 
@@ -130,5 +142,12 @@ public class Point implements Comparable<Point> {
      */
     public static void main(String[] args) {
         /* YOUR CODE HERE */
+//        Point p1 = new Point(1, 2);
+//        Point p2 = new Point(4, 6);
+//        Point p3 = new Point(0, 0);
+//        p1.draw();
+//        p2.draw();
+//        p1.drawTo(p2);
+//        System.out.println(p3.slopeOrder().compare(p1, p2));
     }
 }
