@@ -1,11 +1,11 @@
-
+package Deque;
 
 /*------------------------------------------------------------------------------------------------------------------
     Author: Samarth Tambad
-    Class Name: RandomizedQueue.java
+    Class Name: Deque.RandomizedQueue.java
     Dependencies:
-    Compile: javac RandomizedQueue.java
-    Run: java RandomizedQueue.java
+    Compile: javac Deque.RandomizedQueue.java
+    Run: java Deque.RandomizedQueue.java
     Description: This class implements Randomized Queue
 ------------------------------------------------------------------------------------------------------------------*/
 

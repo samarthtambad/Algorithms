@@ -1,11 +1,11 @@
-
+package Deque;
 /*------------------------------------------------------------------------------------------------------------------
     Author: Samarth Tambad
-    Class Name: Permutation.java
+    Class Name: Deque.Permutation.java
     Dependencies: Iterator
-    Compile: javac Permutation.java
-    Run: java Permutation.java
-    Description: This class implements a Double Ended Queue (Deque)
+    Compile: javac Deque.Permutation.java
+    Run: java Deque.Permutation.java
+    Description: This class implements a Double Ended Queue (Deque.Deque)
 ------------------------------------------------------------------------------------------------------------------*/
 
 import edu.princeton.cs.algs4.StdIn;

@@ -1,12 +1,12 @@
-
+package Deque;
 
 /*------------------------------------------------------------------------------------------------------------------
     Author: Samarth Tambad
-    Class Name: Deque.java
+    Class Name: Deque.Deque.java
     Dependencies: Iterator
-    Compile: javac Deque.java
-    Run: java Deque.java
-    Description: This class implements a Double Ended Queue (Deque)
+    Compile: javac Deque.Deque.java
+    Run: java Deque.Deque.java
+    Description: This class implements a Double Ended Queue (Deque.Deque)
 ------------------------------------------------------------------------------------------------------------------*/
 
 import java.util.Iterator;
@@ -137,7 +137,7 @@ public class Deque<Item> implements Iterable<Item> {
 
     public static void main(String[] args){
 
-//        Deque<Integer> deque = new Deque<Integer>();
+//        Deque.Deque<Integer> deque = new Deque.Deque<Integer>();
 //        deque.addFirst(3);
 //        deque.addLast(4);
 //        deque.addFirst(2);
