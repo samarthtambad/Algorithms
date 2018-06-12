@@ -32,9 +32,10 @@ public class Solver {
         // solve the puzzle
         Solver solver = new Solver(initial);
 
-        System.out.println(initial.dimension());
+        System.out.println(initial.toString());
         System.out.println(initial.hamming());
         System.out.println(initial.manhattan());
+        System.out.println(initial.twin().toString());
 
         /*
         // print solution to standard output
