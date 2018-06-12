@@ -2,7 +2,7 @@ public class Board {
 
     private final int dimension;
     private final int[][] m_blocks;
-    private final int[][] goal;
+//    private final int[][] goal;
 
     public Board(int[][] blocks){   // construct a board from an n-by-n array of blocks (where blocks[i][j] = block in row i, column j)
         m_blocks = blocks;
