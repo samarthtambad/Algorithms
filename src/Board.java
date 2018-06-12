@@ -70,7 +70,17 @@ public class Board {
     }
 
     public boolean equals(Object y){      // does this board equal y?
-        return false;
+        if (y == this) return true;
+        if (y == null) return false;
+        if (y.getClass() != this.getClass()) return false;
+        Board other = (Board) y;
+        if(this.dimension() != other.dimension()) return false;
+        for (int i = 0; i < this.dimension(); i++){
+            for (int j = 0; j < this.dimension(); j++){
+                if(this.m_blocks[i][j] != other.m_blocks[i][j]) return false;
+            }
+        }
+        return true;
     }
 
     public Iterable<Board> neighbors(){     // all neighboring boards
@@ -86,7 +96,7 @@ public class Board {
             }
             s.append("\n");
         }
-        return s.toString(); 
+        return s.toString();
     }
 
 }

@@ -35,7 +35,6 @@ public class Solver {
         System.out.println(initial.toString());
         System.out.println(initial.hamming());
         System.out.println(initial.manhattan());
-        System.out.println(initial.twin().toString());
 
         /*
         // print solution to standard output
