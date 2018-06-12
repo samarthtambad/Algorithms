@@ -57,11 +57,13 @@ public class Board {
             int j1 = StdRandom.uniform(m_dimension);
             int i2 = StdRandom.uniform(m_dimension);
             int j2 = StdRandom.uniform(m_dimension);
-            if ((m_twin[i1][j1] != 0) && (m_twin[i2][j2] != 0)){
-                int temp = m_twin[i1][j1];
-                m_twin[i1][j1] = m_twin[i2][j2];
-                m_twin[i2][j2] = temp;
-                isChanged = true;
+            if(i1 != i2 || j1 != j2){
+                if ((m_twin[i1][j1] != 0) && (m_twin[i2][j2] != 0)){
+                    int temp = m_twin[i1][j1];
+                    m_twin[i1][j1] = m_twin[i2][j2];
+                    m_twin[i2][j2] = temp;
+                    isChanged = true;
+                }
             }
         }
         return new Board(m_twin);
@@ -75,12 +77,16 @@ public class Board {
         return null;
     }
 
-    public String toString(){       // string representation of this board (in the output format specified below)
-        return null;
-    }
-
-    public static void main(String[] args){
-
+    public String toString(){       // string representation of this board
+        StringBuilder s = new StringBuilder();
+        s.append(m_dimension + "\n");
+        for (int i = 0; i < m_dimension; i++) {
+            for (int j = 0; j < m_dimension; j++) {
+                s.append(String.format("%2d ", m_blocks[i][j]));
+            }
+            s.append("\n");
+        }
+        return s.toString();
     }
 
 }
