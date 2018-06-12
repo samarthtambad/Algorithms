@@ -1,11 +1,22 @@
 public class Board {
 
-    private int dimension;
-    private int[][] m_blocks;
+    private final int dimension;
+    private final int[][] m_blocks;
+    private final int[][] goal;
 
     public Board(int[][] blocks){   // construct a board from an n-by-n array of blocks (where blocks[i][j] = block in row i, column j)
-        dimension = blocks.length;
-        m_blocks = new int[dimension][dimension];
+        m_blocks = blocks;
+        dimension = m_blocks.length;
+//        goal = new int[dimension][dimension];
+//        int counter = 1;
+//        for(int i = 0; i < dimension; i++){     //rows
+//            for(int j = 0; j < dimension; j++){     //cols
+//                if(!(i == dimension-1 && j == dimension-1)){
+//                    goal[i][j] = counter;
+//                    counter++;
+//                }
+//            }
+//        }
     }
 
     public int dimension(){     // board dimension n
