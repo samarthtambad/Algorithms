@@ -32,6 +32,11 @@ public class Solver {
         // solve the puzzle
         Solver solver = new Solver(initial);
 
+        System.out.println(initial.dimension());
+        System.out.println(initial.hamming());
+        System.out.println(initial.manhattan());
+
+        /*
         // print solution to standard output
         if (!solver.isSolvable())
             StdOut.println("No solution possible");
@@ -39,7 +44,7 @@ public class Solver {
             StdOut.println("Minimum number of moves = " + solver.moves());
             for (Board board : solver.solution())
                 StdOut.println(board);
-        }
+        }*/
     }
 
 }
