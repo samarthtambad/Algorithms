@@ -1,6 +1,8 @@
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 
+import java.util.Iterator;
+
 public class Solver {
 
     public Solver(Board initial){   // find a solution to the initial board (using the A* algorithm)
@@ -33,8 +35,14 @@ public class Solver {
         Solver solver = new Solver(initial);
 
         System.out.println(initial.toString());
-        System.out.println(initial.hamming());
-        System.out.println(initial.manhattan());
+        System.out.println("-------------------------");
+//        System.out.println(initial.hamming());
+//        System.out.println(initial.manhattan());
+//        System.out.println(initial.twin().toString());
+        Iterator<Board> i = initial.neighbors().iterator();
+        while (i.hasNext()){
+            System.out.println(i.next().toString());
+        }
 
         /*
         // print solution to standard output
