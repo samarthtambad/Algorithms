@@ -8,6 +8,7 @@ public class Board {
     private int blank_idx = 0;
 
     public Board(int[][] blocks){   // construct a board from an n-by-n array of blocks (where blocks[i][j] = block in row i, column j)
+        if(blocks == null) throw new IllegalArgumentException("board can't be null");
         N = blocks.length;
         board = new int[N * N];
         for(int i = 0; i < N; i++){
@@ -19,6 +20,7 @@ public class Board {
     }
 
     private Board(int[] board) {            // private constructor useful in twin()
+        if(board == null) throw new IllegalArgumentException("board can't be null");
         N = (int) Math.sqrt(board.length);
         this.board = new int[board.length];
         for (int i = 0; i < board.length; i++) {

@@ -41,7 +41,6 @@ public class Solver {
         pq.insert(new SearchNode(initial, 0, null));
         pqTwin.insert(new SearchNode(initial.twin(), 0, null));
 
-        System.out.println(pq.min().board.toString());
 
         while(!pq.min().board.isGoal() && !pqTwin.min().board.isGoal()){
             minNode = pq.delMin();
@@ -92,7 +91,7 @@ public class Solver {
 
     public static void main(String[] args){     // solve a slider puzzle
         // create initial board from file
-        In in = new In(args[0]);
+        /*In in = new In(args[0]);
         int n = in.readInt();
         int[][] blocks = new int[n][n];
         for (int i = 0; i < n; i++)
@@ -110,7 +109,7 @@ public class Solver {
             StdOut.println("Minimum number of moves = " + solver.moves());
             for (Board board : solver.solution())
                 StdOut.println(board);
-        }
+        }*/
     }
 
 }
