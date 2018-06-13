@@ -7,7 +7,7 @@ import java.util.Iterator;
 
 public class Solver {
 
-    MinPQ<SearchNode> pq, pqTwin;
+    private MinPQ<SearchNode> pq, pqTwin;
     private Board initial;
 
     private class SearchNode implements Comparable<SearchNode> {

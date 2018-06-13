@@ -17,8 +17,13 @@ public class Board {
     private final int[] m_blank_idx;
 
     public Board(int[][] blocks){   // construct a board from an n-by-n array of blocks (where blocks[i][j] = block in row i, column j)
-        m_blocks = blocks;
-        m_dimension = m_blocks.length;
+
+        m_dimension = blocks.length;
+        m_blocks = new int[m_dimension][m_dimension];
+        for(int i = 0; i < m_dimension; i++){
+            m_blocks[i] = blocks[i].clone();
+        }
+
         m_twin = new int[m_dimension][m_dimension];
         m_neighbour1 = new int[m_dimension][m_dimension];
         m_neighbour2 = new int[m_dimension][m_dimension];
