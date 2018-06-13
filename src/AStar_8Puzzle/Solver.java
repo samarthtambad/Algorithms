@@ -1,12 +1,10 @@
-import edu.princeton.cs.algs4.In;
+package AStar_8Puzzle;
+
 import edu.princeton.cs.algs4.Stack;
-import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.MinPQ;
 
-import java.util.Iterator;
-
 public class Solver {
-    
+
     private Board initial;
     private SearchNode goal;
 
