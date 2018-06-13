@@ -19,7 +19,7 @@ public class Solver {
             board = b;
             moves = m;
             predecessor = p;
-            priority = moves + board.manhattan();
+            priority = moves + b.manhattan();
         }
 
         @Override
@@ -102,17 +102,6 @@ public class Solver {
 
         // solve the puzzle
         Solver solver = new Solver(initial);
-
-//        System.out.println(initial.toString());
-//        System.out.println("-------------------------");
-//        System.out.println(initial.hamming());
-//        System.out.println(initial.manhattan());
-//        System.out.println(initial.twin().toString());
-//        Iterator<Board> i = initial.neighbors().iterator();
-//        while (i.hasNext()){
-//            System.out.println(i.next().toString());
-//        }
-
 
         // print solution to standard output
         if (!solver.isSolvable())

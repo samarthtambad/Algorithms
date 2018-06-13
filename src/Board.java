@@ -1,18 +1,15 @@
-import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Queue;
-
 import java.util.Arrays;
-import java.util.Iterator;
 
 public class Board {
 
     private final int N;
-    private final int[] board;
+    private int[] board;
     private int blank_idx = 0;
 
     public Board(int[][] blocks){   // construct a board from an n-by-n array of blocks (where blocks[i][j] = block in row i, column j)
         N = blocks.length;
-        board = new int[N];
+        board = new int[N * N];
         for(int i = 0; i < N; i++){
             for (int j = 0; j < N; j++){
                 if(blocks[i][j] != 0) board[i * N + j] = blocks[i][j];
@@ -25,7 +22,8 @@ public class Board {
         N = (int) Math.sqrt(board.length);
         this.board = new int[board.length];
         for (int i = 0; i < board.length; i++) {
-            this.board[i] = board[i];
+            if(board[i] != 0) this.board[i] = board[i];
+            else blank_idx = i;
         }
     }
 
@@ -50,7 +48,10 @@ public class Board {
     }
 
     public boolean isGoal(){    // is this board the goal board?
-        return (hamming() == 0 && manhattan() == 0);
+        for (int i = 0; i < N * N - 1; i++)
+            if (board[i] != i + 1)
+                return false;
+        return true;
     }
 
     public Board twin(){    // a board that is obtained by exchanging any pair of blocks
@@ -72,30 +73,33 @@ public class Board {
     }
 
     public Iterable<Board> neighbors(){     // all neighboring boards
-        Board neighbour;
-        Queue<Board> q = new Queue<Board>();
+        Queue<Board> q = new Queue<>();
 
         if (blank_idx / N != 0) {                      // if not first row
-            neighbour = new Board(board);
+            Board neighbour = new Board(board);
             exch(neighbour, blank_idx, blank_idx - N);  // exchange with upper block
+            neighbour.blank_idx = blank_idx - N;
             q.enqueue(neighbour);
         }
 
         if (blank_idx / N != (N - 1)) {               // if not last row
-            neighbour = new Board(board);
+            Board neighbour = new Board(board);
             exch(neighbour, blank_idx, blank_idx + N);  // exchange with lower block
+            neighbour.blank_idx = blank_idx + N;
             q.enqueue(neighbour);
         }
 
         if ((blank_idx % N) != 0) {                        // if not leftmost column
-            neighbour = new Board(board);
+            Board neighbour = new Board(board);
             exch(neighbour, blank_idx, blank_idx - 1);  // exchange with left block
+            neighbour.blank_idx = blank_idx - 1;
             q.enqueue(neighbour);
         }
 
         if ((blank_idx % N) != N - 1) {                          // if not rightmost column
-            neighbour = new Board(board);
+            Board neighbour = new Board(board);
             exch(neighbour, blank_idx, blank_idx + 1);  // exchange with left block
+            neighbour.blank_idx = blank_idx + 1;
             q.enqueue(neighbour);
         }
 
@@ -107,7 +111,7 @@ public class Board {
         s.append(N + "\n");
         for (int i = 0; i < board.length; i++) {
             s.append(String.format("%2d ", board[i]));
-            if (i % N == 0)
+            if ((i+1) % N == 0)
                 s.append("\n");
         }
         return s.toString();
@@ -122,8 +126,8 @@ public class Board {
 
     private Board exch(Board a, int i, int j) { // exchange two elements in the array
         int temp = a.board[i];
-        a.board[j] = a.board[i];
-        a.board[i] = temp;
+        a.board[i] = a.board[j];
+        a.board[j] = temp;
         return a;
     }
 
