@@ -6,9 +6,9 @@ import edu.princeton.cs.algs4.MinPQ;
 import java.util.Iterator;
 
 public class Solver {
-
-    private MinPQ<SearchNode> pq, pqTwin;
+    
     private Board initial;
+    private SearchNode goal;
 
     private class SearchNode implements Comparable<SearchNode> {
         private Board board;
@@ -32,6 +32,7 @@ public class Solver {
 
         if(initial == null) throw new  NullPointerException();
 
+        MinPQ<SearchNode> pq, pqTwin;
         this.initial = initial;
         pq = new MinPQ<SearchNode>();
         pqTwin = new MinPQ<SearchNode>();
@@ -57,30 +58,28 @@ public class Solver {
                     pqTwin.insert(new SearchNode(neighbour, minNodeTwin.moves + 1, minNodeTwin));
                 }
             }
-
         }
+
+        goal = pq.min();
 
     }
 
     public boolean isSolvable(){    // is the initial board solvable?
-        if (pq.min().board.isGoal()) {
+        if (goal.board.isGoal()) {
             return true;
-        }
-        if (pqTwin.min().board.isGoal()) {
-            return false;
         }
         return false;
     }
 
     public int moves(){     // min number of moves to solve initial board; -1 if unsolvable
         if(!isSolvable()) return -1;
-        return pq.min().moves;
+        return goal.moves;
     }
 
     public Iterable<Board> solution(){      // sequence of boards in a shortest solution; null if unsolvable
         if(!isSolvable()) return null;
         Stack<Board> stackSolution = new Stack<Board>();
-        SearchNode current = pq.min();
+        SearchNode current = goal;
         while (current.predecessor!=null) {
             stackSolution.push(current.board);
             current = current.predecessor;
