@@ -1,4 +1,4 @@
-package Deque;
+package deque;
 /*------------------------------------------------------------------------------------------------------------------
     Author: Samarth Tambad
     Class Name: Deque.Permutation.java

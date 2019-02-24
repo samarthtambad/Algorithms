@@ -1,4 +1,4 @@
-package AStar_8Puzzle;
+package astar;
 
 import edu.princeton.cs.algs4.Stack;
 import edu.princeton.cs.algs4.MinPQ;
