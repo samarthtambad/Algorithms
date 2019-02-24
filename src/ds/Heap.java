@@ -6,6 +6,7 @@ public class Heap {
 
     public Heap(int[] A){
         heapsize = 0;
+        buildMaxHeap(A);
     }
 
     public int parent(int i){
