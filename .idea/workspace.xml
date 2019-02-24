@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="720f2c83-8434-4c09-8c42-15b39525a4a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MaximumSubarray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sort/HeapSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithms.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/AStar_8Puzzle/puzzle04.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AStar_8Puzzle/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/astar/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AStar_8Puzzle/Solver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/astar/Solver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AStar_8Puzzle/puzzle04.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/astar/puzzle04.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Deque/Deque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deque/Deque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Deque/Permutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deque/Permutation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Deque/RandomizedQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deque/RandomizedQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Percolation/InteractivePercolationVisualizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/percolation/InteractivePercolationVisualizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Percolation/Percolation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/percolation/Percolation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Percolation/PercolationStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/percolation/PercolationStats.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Percolation/PercolationVisualizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/percolation/PercolationVisualizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorting/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sort/BubbleSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorting/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sort/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sort/HeapSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sort/HeapSort.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,23 +14,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+            <state relative-caret-position="150">
+              <caret line="10" column="57" lean-forward="true" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sort/HeapSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+            <state relative-caret-position="273">
+              <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
               <folding>
-                <element signature="e#79#80#0" expanded="true" />
-                <element signature="e#100#101#0" expanded="true" />
+                <element signature="e#95#96#0" expanded="true" />
+                <element signature="e#123#124#0" expanded="true" />
                 <element signature="e#162#163#0" expanded="true" />
                 <element signature="e#196#197#0" expanded="true" />
                 <element signature="e#201#202#0" expanded="true" />
@@ -76,8 +60,8 @@
         <option value="$PROJECT_DIR$/src/Sorting/BubbleSort.java" />
         <option value="$PROJECT_DIR$/src/Sorting/MergeSort.java" />
         <option value="$PROJECT_DIR$/src/MaximumSubarray.java" />
-        <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/src/sort/HeapSort.java" />
+        <option value="$PROJECT_DIR$/src/Test.java" />
       </list>
     </option>
   </component>
@@ -122,7 +106,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551018401125" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551024619733" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -168,12 +152,12 @@
       <workItem from="1550162375394" duration="2203000" />
       <workItem from="1550674710573" duration="6388000" />
       <workItem from="1550754989774" duration="14000" />
-      <workItem from="1551016542565" duration="1835000" />
+      <workItem from="1551016542565" duration="5897000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10440000" />
+    <option name="totallyTimeSpent" value="14502000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -188,7 +172,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32876712" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21232876" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -245,20 +229,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sort/HeapSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        <state relative-caret-position="273">
+          <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
           <folding>
-            <element signature="e#79#80#0" expanded="true" />
-            <element signature="e#100#101#0" expanded="true" />
+            <element signature="e#95#96#0" expanded="true" />
+            <element signature="e#123#124#0" expanded="true" />
             <element signature="e#162#163#0" expanded="true" />
             <element signature="e#196#197#0" expanded="true" />
             <element signature="e#201#202#0" expanded="true" />
@@ -266,6 +243,13 @@
             <element signature="e#285#286#0" expanded="true" />
             <element signature="e#307#308#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="57" lean-forward="true" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
         </state>
       </provider>
     </entry>
