@@ -12,7 +12,6 @@ public class QuickSort {
             A[randidx] = temp;
         }
         int pivot = r;
-        System.out.println("pivot: " + A[pivot]);
         int i = p - 1;
         for(int j = p; j < r; j++){
             if(A[j] <= A[pivot]){
@@ -26,15 +25,14 @@ public class QuickSort {
         int temp = A[i];
         A[i] = A[pivot];
         A[pivot] = temp;
-        System.out.println(java.util.Arrays.toString(java.util.Arrays.copyOfRange(A, p, r+1)));
         return i;
     }
 
-    public void sort(int[] A, int p, int r){
+    public void sort(int[] A, int p, int r, boolean randomized){
         if(p < r){
-            int q = partition(A, p, r, false);
-            sort(A, p, q-1);
-            sort(A, q+1, r);
+            int q = partition(A, p, r, randomized);
+            sort(A, p, q-1, randomized);
+            sort(A, q+1, r, randomized);
         }
     }
 
