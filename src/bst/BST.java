@@ -15,6 +15,15 @@ public class BST {
         }
     }
 
+    public BSTNode search(BSTNode x, int key){
+        if(x == null || x.key == key)
+            return x;
+        if(key < x.key)
+            return search(x.left, key);
+        else
+            return search(x.right, key);
+    }
+
     public void insert(int key){
 
     }
