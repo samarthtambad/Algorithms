@@ -7,6 +7,10 @@ public class BST {
         this.root = null;
     }
 
+    public BSTNode getRoot(){
+        return root;
+    }
+
     public void inorderTreeWalk(BSTNode x){
         if(x != null){
             inorderTreeWalk(x.left);

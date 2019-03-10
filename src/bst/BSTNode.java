@@ -12,4 +12,9 @@ public class BSTNode {
         this.right = null;
         this.p = null;
     }
+
+    public int getKey(){
+        return key;
+    }
+
 }
