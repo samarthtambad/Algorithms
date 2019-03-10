@@ -88,6 +88,23 @@ public class BST {
             v.p = u.p;
     }
 
-
+    public void delete(BSTNode z){
+        BSTNode y = null;
+        if (z.left == null)
+            transplant(z, z.right);
+        else if (z.right == null)
+            transplant(z, z.left);
+        else {
+            y = minimum(z.right);   //successor in the sub-tree
+            if (y.p != z) {  //if successor is not direct child
+                transplant(y, y.right);
+                y.right = z.right;
+                y.right.p = y;
+            }
+            transplant(z, y);
+            y.left = z.left;
+            y.left.p = y;
+        }
+    }
 
 }
