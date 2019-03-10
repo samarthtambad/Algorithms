@@ -5,7 +5,8 @@ public class BSTNode {
     BSTNode left;
     BSTNode right;
     BSTNode p;
-    public void BSTNode(int key){
+
+    public BSTNode(int key){
         this.key = key;
         this.left = null;
         this.right = null;

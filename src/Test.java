@@ -1,11 +1,8 @@
-import sort.QuickSort;
+import bst.*;
 
 public class Test {
     public static void main(String args[]){
-        int[] A = {5, 6, 10, 3, 4, 2, 9, 1, 8, 7};
-        System.out.println(java.util.Arrays.toString(A));
-        QuickSort sort = new QuickSort();
-        sort.sort(A, 0, A.length - 1, true);
-        System.out.println(java.util.Arrays.toString(A));
+        BST tree = new BST();
+        tree.insert(new BSTNode(1));
     }
 }

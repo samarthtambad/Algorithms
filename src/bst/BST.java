@@ -3,7 +3,7 @@ package bst;
 public class BST {
     BSTNode root;
 
-    public void BST(){
+    public BST(){
         this.root = null;
     }
 
