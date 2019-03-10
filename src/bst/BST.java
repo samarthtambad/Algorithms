@@ -60,7 +60,34 @@ public class BST {
             return search(x.right, key);
     }
 
-    public void insert(int key){
-
+    public void insert(BSTNode z){
+        BSTNode y = null;
+        BSTNode x = this.root;
+        while (x != null){
+            y = x;
+            if (z.key < x.key)
+                x = x.left;
+            else
+                x = x.right;
+        }
+        z.p = y;
+        if (y == null)
+            this.root = z;
+        else if (z.key < y.key)
+            y.left = z;
+        else y.right = z;
     }
+
+    private void transplant(BSTNode u, BSTNode v){
+        if (u.p == null)
+            this.root = v;
+        else if (u == u.p.left)
+            u.p.left = v;
+        else u.p.right = v;
+        if (v != null)
+            v.p = u.p;
+    }
+
+
+
 }
