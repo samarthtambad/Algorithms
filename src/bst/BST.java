@@ -29,8 +29,26 @@ public class BST {
         return x;
     }
 
-    public BSTNode successor(BSTNode x){
+    public BSTNode predecessor(BSTNode x){
+        if (x.left != null)
+            return maximum(x.left);
+        BSTNode y = x.p;
+        while (y != null && x == y.left){
+            x = y;
+            y = y.p;
+        }
+        return y;
+    }
 
+    public BSTNode successor(BSTNode x){
+        if (x.right != null)
+            return minimum(x.right);
+        BSTNode y = x.p;
+        while (y != null && x == y.right){
+            x = y;
+            y = y.p;
+        }
+        return y;
     }
 
     public BSTNode search(BSTNode x, int key){
