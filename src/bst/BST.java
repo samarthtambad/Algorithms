@@ -15,6 +15,24 @@ public class BST {
         }
     }
 
+    public BSTNode minimum(BSTNode x){
+        while (x.left != null){
+            x = x.left;
+        }
+        return x;
+    }
+
+    public BSTNode maximum(BSTNode x){
+        while (x.right != null){
+            x = x.right;
+        }
+        return x;
+    }
+
+    public BSTNode successor(BSTNode x){
+
+    }
+
     public BSTNode search(BSTNode x, int key){
         if(x == null || x.key == key)
             return x;
