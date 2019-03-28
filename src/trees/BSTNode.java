@@ -1,4 +1,4 @@
-package bst;
+package trees;
 
 public class BSTNode {
     int key;

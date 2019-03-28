@@ -1,4 +1,4 @@
-package bst;
+package trees;
 
 public class BST {
     BSTNode root;
