@@ -14,20 +14,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+            <state relative-caret-position="180">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dp/RodCutting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
+            <state relative-caret-position="87">
+              <caret line="103" column="13" lean-forward="true" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
+              <folding>
+                <element signature="e#3242#3243#0" expanded="true" />
+                <element signature="e#3281#3282#0" expanded="true" />
+                <element signature="e#3315#3316#0" expanded="true" />
+                <element signature="e#3350#3351#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -99,7 +105,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553875150731" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553876442137" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -151,12 +157,12 @@
       <workItem from="1551905775106" duration="402000" />
       <workItem from="1552221195880" duration="8156000" />
       <workItem from="1553775332297" duration="893000" />
-      <workItem from="1553872803837" duration="2365000" />
+      <workItem from="1553872803837" duration="3645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32917000" />
+    <option name="totallyTimeSpent" value="34197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -304,17 +310,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/dp/RodCutting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        <state relative-caret-position="87">
+          <caret line="103" column="13" lean-forward="true" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
+          <folding>
+            <element signature="e#3242#3243#0" expanded="true" />
+            <element signature="e#3281#3282#0" expanded="true" />
+            <element signature="e#3315#3316#0" expanded="true" />
+            <element signature="e#3350#3351#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dp/RodCutting.java">
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
+        <state relative-caret-position="180">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>

@@ -80,4 +80,55 @@ public class RodCutting {
         System.out.println("Bottom Up - price: " + maxPrice + ", time: " + totalTime);
     }
 
+    /* Implement cut rod while also saving the actual optimal solution not just the value.
+       Returns class Solution which wraps both maxPrice and optimal cut positions. */
+
+    public final class Solution{
+        int maxPrice;
+        int[] cuts;
+        int[] p;
+        int n;
+
+        public Solution(int[] p, int n, int maxPrice, int[] cuts){
+            this.maxPrice = maxPrice;
+            this.cuts = cuts;
+            this.p = p;
+            this.n = n;
+        }
+
+        public void printSolution(){
+            int i = this.n;
+            while (i > 0){
+                System.out.println(cuts[i]);
+                i = i - cuts[i];
+            }
+        }
+
+        public int getMaxPrice() {
+            return maxPrice;
+        }
+
+        public int[] getCuts() {
+            return cuts;
+        }
+    }
+
+    public Solution cutRod(int[] p, int n){
+        int[] r = new int[n + 1];
+        int[] s = new int[n + 1];
+        r[0] = 0;
+        s[0] = 0;
+        for(int j = 1; j <= n; j++){
+            int maxPrice = - 1000;
+            for(int i = 1; i <= j; i++){
+                if(maxPrice < p[i]+r[j-i]){
+                    maxPrice = p[i]+r[j-i];
+                    s[j] = i;
+                }
+            }
+            r[j] = maxPrice;
+        }
+        return new Solution(p, n, r[n], s);
+    }
+
 }
