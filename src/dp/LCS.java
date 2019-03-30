@@ -11,7 +11,7 @@ package dp;
 
 public class LCS {
 
-    final class Solution{
+    public final class Solution{
         String s1;
         String s2;
         int[][] c;
@@ -35,12 +35,12 @@ public class LCS {
             printLCSAux(m, n);
         }
 
-        public void printLCSAux(int i, int j){
+        private void printLCSAux(int i, int j){
             if (i == 0 || j == 0)
                 return;
             if(b[i][j] == 'd'){
                 printLCSAux(i - 1, j - 1);
-                System.out.print(s1.charAt(i));
+                System.out.print(s1.charAt(i - 1));
             } else if(b[i][j] == 'u'){
                 printLCSAux(i - 1, j);
             } else {
@@ -72,7 +72,7 @@ public class LCS {
         }
         for(int i = 1; i <= m; i++){    // rows
             for(int j = 1; j <= n; j++){    // columns
-                if(s1.charAt(i) == s2.charAt(j)){
+                if(s1.charAt(i - 1) == s2.charAt(j - 1)){
                     c[i][j] = c[i - 1][j - 1] + 1;
                     b[i][j] = 'd';  //left-up diagonal direction
                 } else if(c[i - 1][j] > c[i][j - 1]){
