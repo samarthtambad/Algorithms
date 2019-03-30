@@ -28,6 +28,33 @@ public class LCS {
             this.b = b;
         }
 
+        public void printLCS(){
+            System.out.println("Input 1: " + s1);
+            System.out.println("Input 2: " + s2);
+            System.out.print("Output: ");
+            printLCSAux(m, n);
+        }
+
+        public void printLCSAux(int i, int j){
+            if (i == 0 || j == 0)
+                return;
+            if(b[i][j] == 'd'){
+                printLCSAux(i - 1, j - 1);
+                System.out.print(s1.charAt(i));
+            } else if(b[i][j] == 'u'){
+                printLCSAux(i - 1, j);
+            } else {
+                printLCSAux(i, j - 1);
+            }
+        }
+
+        public String getS1() {
+            return s1;
+        }
+
+        public String getS2() {
+            return s2;
+        }
     }
 
     public Solution findLCS(String s1, String s2){
