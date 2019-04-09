@@ -29,16 +29,16 @@ public class MartixChainMultiplication {
     }
 
     public int[][] computeMatrixChainOrder(int[] p){
-        int n = p.length;
+        int n = p.length - 1;
         int[][] m = new int[n][n];
         int[][]s = new int[n][n];
 
         for(int l = 1; l < n; l++){
-            for(int i = 0; i < n; i++){
+            for(int i = 0; i < n - l + 1; i++){
                 int j = i + l - 1;
                 m[i][j] = 65535;
                 for(int k = i; k < j-1; k++){
-                    int q = m[i][k] + m[k+1][j] + (p[i] * p[j] * p[k]);
+                    int q = m[i][k] + m[k+1][j] + (p[i] * p[j + 1] * p[k + 1]);
                     if(q < m[i][j]){
                         m[i][j] = q;
                         s[i][j] = k;
