@@ -18,5 +18,36 @@ package dp;
 
 public class MartixChainMultiplication {
 
+    public void printOptimalOrder(int[][] s, int i, int j){
+        if(i == j) System.out.print("A" + i);
+        else {
+            System.out.print("(");
+            printOptimalOrder(s, i, s[i][j]);
+            printOptimalOrder(s, s[i][j]+1, j);
+            System.out.print(")");
+        }
+    }
+
+    public int[][] computeMatrixChainOrder(int[] p){
+        int n = p.length;
+        int[][] m = new int[n][n];
+        int[][]s = new int[n][n];
+
+        for(int l = 1; l < n; l++){
+            for(int i = 0; i < n; i++){
+                int j = i + l - 1;
+                m[i][j] = 65535;
+                for(int k = i; k < j-1; k++){
+                    int q = m[i][k] + m[k+1][j] + (p[i] * p[j] * p[k]);
+                    if(q < m[i][j]){
+                        m[i][j] = q;
+                        s[i][j] = k;
+                    }
+                }
+            }
+        }
+
+        return s;
+    }
 
 }
