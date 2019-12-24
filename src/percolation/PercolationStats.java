@@ -76,7 +76,13 @@ public class PercolationStats {
 //    }
 
     public static void main(String args[]){  //For testing only
-
+        int n = 200;
+        int trials = 100;
+        System.out.println(n + " : " + trials);
+        PercolationStats stats = new PercolationStats(n, trials);
+        System.out.println("mean\t = " + stats.mean());
+        System.out.println("stddev\t = " + stats.stddev());
+        System.out.println("95% confidence interval\t = [" + stats.confidenceLo() + ", " + stats.confidenceHi() + "]");
     }
 
 }
